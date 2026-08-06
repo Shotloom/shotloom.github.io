@@ -1,12 +1,17 @@
 # Shotloom — branding
 
-**shot** (inquadrature) + **loom** (telaio): più camere intrecciate in un montaggio.
+**shot** (inquadrature / camere) + **loom** (telaio): tre viewfinder che si intrecciano in un solo clip timeline.
+
+## Mark
+
+Tre camere stilizzate (corpo + schermo) → steli che convergono → barra timeline con play.
+Leggibile a 16–32 px.
 
 ## Palette
 
 | Ruolo | Hex | Uso |
 |-------|-----|-----|
-| Accent primary | `#ff5b45` | coral CTA / thread |
+| Accent primary | `#ff5b45` | coral |
 | Accent secondary | `#ff3d8b` | magenta / timeline |
 | Accent tertiary | `#ff7a66` | coral light |
 | Testo dark bg | `#f3f5fa` | wordmark |

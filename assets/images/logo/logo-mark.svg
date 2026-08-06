@@ -1,25 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Shotloom mark">
   <title>Shotloom</title>
-  <desc>Tre camere intrecciate in una timeline orizzontale</desc>
+  <desc>Tre camere (shot) intrecciate (loom) in un solo clip timeline</desc>
   <defs>
-    <linearGradient id="slMark" x1="10" y1="4" x2="54" y2="4" gradientUnits="userSpaceOnUse">
+    <linearGradient id="slMark" x1="4" y1="8" x2="60" y2="8" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#ff5b45"/>
-      <stop offset="50%" stop-color="#ff7a66"/>
+      <stop offset="55%" stop-color="#ff7a66"/>
       <stop offset="100%" stop-color="#ff3d8b"/>
     </linearGradient>
   </defs>
-  <!-- left thread -->
-  <path d="M16 6v16c0 4 2 7 6 10" stroke="url(#slMark)" stroke-width="5" stroke-linecap="round" fill="none"/>
-  <!-- center thread -->
-  <path d="M32 4v18c0 3-2 6-6 9c4 3 6 6 6 9" stroke="url(#slMark)" stroke-width="5" stroke-linecap="round" fill="none"/>
-  <!-- right thread -->
-  <path d="M48 6v16c0 4-2 7-6 10" stroke="url(#slMark)" stroke-width="5" stroke-linecap="round" fill="none"/>
-  <!-- braid cross hints -->
-  <path d="M22 28c4 3 8 3 12 0" stroke="url(#slMark)" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.9"/>
-  <path d="M26 36c3 2 7 2 10 0" stroke="url(#slMark)" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.85"/>
-  <!-- stem into timeline -->
-  <path d="M32 44v6" stroke="#ff3d8b" stroke-width="5" stroke-linecap="round"/>
-  <!-- timeline bar -->
-  <rect x="10" y="50" width="44" height="8" rx="3" fill="#ff3d8b"/>
-  <path d="M18 58v3M26 58v3M32 58v3M38 58v3M46 58v3" stroke="#ff3d8b" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- three camera bodies (shot) -->
+  <rect x="3" y="4" width="17" height="14" rx="3" fill="url(#slMark)"/>
+  <rect x="6.5" y="7" width="10" height="7" rx="1.5" fill="#0b0d12"/>
+  <circle cx="11.5" cy="10.5" r="2.2" fill="url(#slMark)"/>
+  <rect x="23.5" y="2" width="17" height="16" rx="3" fill="url(#slMark)"/>
+  <rect x="27" y="5.5" width="10" height="8" rx="1.5" fill="#0b0d12"/>
+  <circle cx="32" cy="9.5" r="2.4" fill="url(#slMark)"/>
+  <rect x="44" y="4" width="17" height="14" rx="3" fill="url(#slMark)"/>
+  <rect x="47.5" y="7" width="10" height="7" rx="1.5" fill="#0b0d12"/>
+  <circle cx="52.5" cy="10.5" r="2.2" fill="url(#slMark)"/>
+  <!-- loom: strands into one timeline cut -->
+  <path d="M11.5 18C11.5 29 22 37 32 46" stroke="url(#slMark)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M32 18V46" stroke="url(#slMark)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M52.5 18C52.5 29 42 37 32 46" stroke="url(#slMark)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- timeline clip + play -->
+  <rect x="7" y="47" width="50" height="12" rx="3.5" fill="#ff3d8b"/>
+  <path fill="#0b0d12" d="M28 50l10 3.5-10 3.5z"/>
 </svg>
