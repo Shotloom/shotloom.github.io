@@ -1,0 +1,121 @@
+title: "Shotloom"
+description: "Drop in 2–4 multicam clips. Shotloom syncs, montages with AI, and exports for YouTube, TikTok, Instagram and Facebook — 100% local via Docker."
+baseurl: ""
+url: "https://shotloom.github.io"
+
+author:
+  name: "Antonio Trento"
+  email: "info@antoniotrento.net"
+  bio: "Local AI & Video Automation"
+
+og_image: "/assets/images/logo/favicon.svg"
+
+paginate: 20
+paginate_path: "/blog/page:num"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+
+faq_en:
+  - question: "I have multicam footage right now. What do I get if I run Shotloom?"
+    answer: "Drop 2–4 camera clips from a real shoot — podcast, event, interview, or workshop — and Shotloom syncs them, builds a rough cut, adds captions, and prepares platform exports. Elena uses it for weekly YouTube cuts, Marco for TikTok clips, Giulia for 9:16 reels. The point is turning raw multicam into publish-ready edits without a cloud NLE bill."
+  - question: "I'm not technical. Can I actually run it?"
+    answer: "Yes. Install Docker, run the bootstrap script once, open http://127.0.0.1:8765 in your browser. On first run it pulls models locally — no account required. The code is open on GitHub; you verify what runs on your machine."
+  - question: "Why not just use CapCut, Descript, or a cloud editor?"
+    answer: "Those paths upload your footage, charge subscriptions, and lock you into their export rules. Unreleased episodes, client events, sensitive interviews — that trade-off gets old fast. Shotloom is for creators who'd rather pay with disk space and GPU time on their own box than with recurring bills."
+  - question: "Will the AI montage be good enough for real work?"
+    answer: "Honest answer: test your cameras, your room, your pacing. Run a 10–20 minute multicam sample you know well. Tweak rhythm and subtitle style in the dashboard, then export. No marketing page replaces your actual footage."
+  - question: "Can I leave while a long project processes?"
+    answer: "Yes. Upload clips, start analysis, minimize the browser tab and get on with your day. Come back for the rough cut, captions, and exports. A 45-minute three-camera session shouldn't glue you to a progress bar all afternoon."
+  - question: "What does it cost? What's the catch?"
+    answer: "No cloud editing bill: the pipeline runs on your machine via Docker. The catch is honest — you need Docker, a capable PC, and disk for models/proxies. License terms are still being finalized (see GitHub README); early access is on GitHub while the product matures."
+  - question: "My files are confidential. Who sees them?"
+    answer: "Processing keeps files on your machine (or your VPS you control). That's why event producers and creators who don't trust upload services use it. Optional cloud APIs are separate — you only enable them if you pick a provider."
+  - question: "What formats can I throw at it?"
+    answer: "What you already have: MP4 from cameras, phone memos, podcast WAV exports, screen captures, MKV. Normal multicam workflows — no manual prep for typical use."
+  - question: "Do I need every platform export on day one?"
+    answer: "No. Most people start with one master cut and one vertical export. YouTube, TikTok, Instagram, and Facebook profiles are there when you need them — tune montage rhythm and caption style first, then batch export."
+  - question: "What should I do in the first 30 minutes after bootstrap?"
+    answer: "Pick one real multicam session — not a stress test. Drop the clips, let sync and rough cut finish, preview in the dashboard, export one platform profile. If that clicks, queue the rest of your backlog."
+
+faq_it:
+  - question: "Ho footage multicam adesso. Cosa ottengo se avvio Shotloom?"
+    answer: "Trascini 2–4 clip da uno shooting vero — podcast, evento, intervista o workshop — e Shotloom le sincronizza, monta un rough cut, aggiunge caption ed esporta per le piattaforme. Elena per YouTube settimanale, Marco per TikTok, Giulia per reel 9:16. Il punto è trasformare multicam grezzo in edit pronti senza bollette cloud."
+  - question: "Non sono tecnico. Riuscirò ad avviarlo?"
+    answer: "Sì. Installi Docker, lanci lo script bootstrap una volta, apri http://127.0.0.1:8765 nel browser. Al primo avvio scarica i modelli in locale — niente account. Il codice è su GitHub; verifichi cosa gira sulla tua macchina."
+  - question: "Perché non usare CapCut, Descript o un editor cloud?"
+    answer: "Quei percorsi caricano il footage, costano abbonamenti e ti legano alle loro regole di export. Episodi non pubblicati, eventi clienti, interviste sensibili — il compromesso stanca in fretta. Shotloom è per chi preferisce pagare con disco e GPU propri invece di bollette ricorrenti."
+  - question: "Il montaggio AI basta per lavoro vero?"
+    answer: "Risposta onesta: prova le tue camere, la stanza, il ritmo. Fai un campione multicam da 10–20 minuti che conosci bene. Affina ritmo e stile sottotitoli nella dashboard, poi esporta. Nessuna landing sostituisce il tuo materiale."
+  - question: "Posso andare via mentre elabora un progetto lungo?"
+    answer: "Sì. Carichi le clip, avvii l'analisi, minimizzi il browser e continui la giornata. Torni per rough cut, caption ed export. Una sessione da 45 minuti a tre camere non deve incollarti a una barra di avanzamento tutto il pomeriggio."
+  - question: "Quanto costa? Qual è il trucco?"
+    answer: "Niente bolletta cloud di montaggio: la pipeline gira sulla tua macchina via Docker. Il trucco è onesto — servono Docker, un PC capace e spazio disco per modelli/proxy. I termini di licenza sono ancora in definizione (vedi README su GitHub); l'early access è su GitHub mentre il prodotto matura."
+  - question: "I miei file sono riservati. Chi li vede?"
+    answer: "L'elaborazione tiene i file sulla tua macchina (o sul VPS che controlli tu). Per questo producer e creator che non si fidano dei servizi upload lo usano. Le API cloud opzionali sono un passo separato — le attivi solo se scegli un provider."
+  - question: "Che formati posso caricare?"
+    answer: "Quelli che hai già: MP4 dalle camere, memo del telefono, export WAV, catture schermo, MKV. Flussi multicam normali — per l'uso tipico non devi preparare i file a mano."
+  - question: "Mi servono tutti gli export piattaforma subito?"
+    answer: "No. La maggior parte parte da un master e un export verticale. Profili YouTube, TikTok, Instagram e Facebook ci sono quando servono — prima affina ritmo montaggio e stile caption, poi esporta in batch."
+  - question: "Cosa faccio nei primi 30 minuti dopo il bootstrap?"
+    answer: "Scegli una sessione multicam vera — non uno stress test. Trascina le clip, attendi sync e rough cut, anteprima nella dashboard, esporta un profilo piattaforma. Se funziona, accoda il resto del backlog."
+
+social:
+  github: "https://github.com/Shotloom/Shotloom"
+  twitter: "https://x.com/antoniotrento"
+
+cta:
+  github_url: "https://github.com/Shotloom/Shotloom"
+  docs_url: "https://shotloom.github.io/docs"
+  download_url: "https://github.com/Shotloom/Shotloom"
+  download_page_it: "/it/download/"
+  download_page_en: "/en/download/"
+
+docs:
+  base_en: "/docs/"
+  base_it: "/docs/it/"
+
+popup:
+  url: "https://github.com/Shotloom/Shotloom"
+  en:
+    url: "/en/download/"
+    title: "Got multicam clips to edit?"
+    body: "Bootstrap with Docker, open the dashboard, drop 2–4 camera files. AI sync, montage, and platform exports on your machine — no upload required."
+    button: "Get started"
+  it:
+    url: "/it/download/"
+    title: "Hai clip multicam da montare?"
+    body: "Bootstrap con Docker, apri la dashboard, trascina 2–4 file camera. Sync, montaggio AI ed export piattaforma sulla tua macchina — niente upload obbligatorio."
+    button: "Inizia"
+
+permalink: "/:categories/:title/"
+markdown: kramdown
+highlighter: rouge
+
+include:
+  - assets
+  - robots.txt
+
+exclude:
+  - _webpages_backups
+  - assets/images/logo_old
+  - assets/images/logo/proposals
+  - Gemfile
+  - Gemfile.lock
+  - docker-compose.yml
+  - README.md
+  - vendor
+  - node_modules
+
+keywords:
+  - montaggio video ai
+  - multicam sync
+  - nle locale
+  - export youtube tiktok
+  - sottotitoli automatici
+  - docker video editing
+  - shotloom
+  - rough cut automatico
+  - export instagram facebook

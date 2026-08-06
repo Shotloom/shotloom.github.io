@@ -1,0 +1,233 @@
+---
+layout: default
+title: "Funzionalità - Shotloom"
+lang: it
+permalink: /it/strategies/
+---
+
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 overflow-hidden bg-brand-dark border-b border-white/10 bg-grid-pattern">
+    <div class="absolute inset-0 bg-brand-dark/90 transition-colors"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-green-500/10 border border-green-500/30 text-green-500 text-xs font-mono font-bold uppercase mb-6">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            PIPELINE MULTICAM
+        </div>
+        <h1 class="text-6xl lg:text-7xl font-black font-display mb-6 text-white uppercase tracking-tighter">Provalo sul tuo footage vero,<br><span class="text-brand-purple">non su una demo pulita</span></h1>
+        <p class="text-xl text-gray-400 mb-12 text-sm max-w-2xl mx-auto">
+            Niente gergo — solo il percorso da "ho quattro angolazioni" a "rough cut ed export pronti". Ogni sezione risponde a un dubbio reale: precisione sync, qualità montaggio AI, sottotitoli, export piattaforma. Un obiettivo: provare la prima sessione multicam e vedere se funziona per te.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+            <div class="bg-[#111] border border-white/10 p-6">
+                <div class="text-[10px] text-gray-500 uppercase mb-2">Sync multicam</div>
+                <div class="text-3xl font-black text-green-500">2–4 cam</div>
+            </div>
+            <div class="bg-[#111] border border-white/10 p-6">
+                <div class="text-[10px] text-gray-500 uppercase mb-2">Montaggio AI</div>
+                <div class="text-3xl font-black text-white">Rough cut</div>
+            </div>
+            <div class="bg-[#111] border border-white/10 p-6">
+                <div class="text-[10px] text-gray-500 uppercase mb-2">Sottotitoli</div>
+                <div class="text-3xl font-black text-brand-purple">SRT stilizzato</div>
+            </div>
+            <div class="bg-[#111] border border-white/10 p-6">
+                <div class="text-[10px] text-gray-500 uppercase mb-2">Piattaforme</div>
+                <div class="text-3xl font-black text-brand-pink">YT·TT·IG·FB</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Section 1: Multicam Sync -->
+<section class="py-32 px-6 bg-white dark:bg-[#0a0a0a] border-b border-gray-200 dark:border-white/10 transition-colors relative">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div>
+                <div class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">Funzione_01</div>
+                <h2 class="text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight mb-6">Quattro angolazioni. Ancora sync a mano?</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-8 font-mono text-sm leading-relaxed border-l-2 border-brand-purple pl-4">
+                    Elena gestisce un podcast tre camere ogni settimana. Il collo di bottiglia non è girare — è allineare gli stream prima del montaggio. Passava ore in un tool sync manuale. Paura install: niente progetto Docker del weekend. Paura sync: drift tra mic e camere. Poi ha caricato tutti i file camera in Shotloom ed è tornata a stream allineati pronti per montaggio AI. Ora: ingest dopo lo shoot, pipeline in locale, rough cut in coda. Anche privacy — episodi non pubblicati restano sulla sua macchina.
+                </p>
+                <div class="space-y-4 mb-8 text-sm text-gray-500 font-mono">
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Dubbio</span>
+                        <span class="text-gray-900 dark:text-white font-bold">"Il sync non sarà preciso"</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Prova</span>
+                        <span class="text-green-500 font-bold">Prima sessione in una sera</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Guadagno</span>
+                        <span class="text-gray-900 dark:text-white font-bold">Trascina angolazioni, non allinea a mano</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Fiducia</span>
+                        <span class="text-gray-900 dark:text-white font-bold">Pipeline Docker locale</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#111] border border-brand-purple/30 p-6 rounded shadow-2xl">
+                <div class="text-[10px] text-gray-500 uppercase font-mono mb-4 border-b border-white/10 pb-2">Flusso Sync Multicam</div>
+                <div class="font-mono text-xs text-gray-300 whitespace-pre overflow-x-auto">
+<span class="text-gray-500">Input</span>
+- podcast_ep03_camA.mp4
+- podcast_ep03_camB.mp4
+- podcast_ep03_camC.mp4
+
+<span class="text-gray-500">Sync</span>
+- Allineamento audio su 3 stream
+- Elaborazione locale in Docker
+- Nessun upload cloud
+
+<span class="text-gray-500">Output</span>
+- Stream allineati pronti per montaggio
+- Progresso visibile in dashboard
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Section 2: AI Montage -->
+<section class="py-32 px-6 bg-gray-50 dark:bg-[#111] border-b border-gray-200 dark:border-white/10 transition-colors relative">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div class="order-2 lg:order-1">
+                <div class="bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-brand-pink/30 p-6 rounded shadow-2xl">
+                    <div class="text-[10px] text-gray-500 uppercase font-mono mb-4 border-b border-gray-200 dark:border-white/10 pb-2">Stati Pipeline Montaggio</div>
+                    <table class="w-full font-mono text-xs text-left">
+                        <thead class="text-gray-400 border-b border-gray-200 dark:border-white/10">
+                            <tr>
+                                <th class="py-2">Fase</th>
+                                <th class="py-2">Cosa succede</th>
+                                <th class="py-2">Dashboard</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600 dark:text-gray-300">
+                            <tr class="border-b border-gray-100 dark:border-white/5">
+                                <td class="py-3 text-yellow-500">analyze</td>
+                                <td class="py-3">VAD + face scoring</td>
+                                <td class="py-3">Tab Media</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 dark:border-white/5">
+                                <td class="py-3 text-brand-purple">montage</td>
+                                <td class="py-3">Draft rough cut AI</td>
+                                <td class="py-3">Ritmo Settings</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 dark:border-white/5">
+                                <td class="py-3 text-green-500">captions</td>
+                                <td class="py-3">Sottotitoli stilizzati</td>
+                                <td class="py-3">Tab Captions</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 text-brand-pink">export</td>
+                                <td class="py-3">Profili piattaforma</td>
+                                <td class="py-3">YT·TT·IG·FB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2">
+                <div class="text-sm font-mono text-brand-pink font-bold uppercase tracking-widest mb-4">Funzione_02</div>
+                <h2 class="text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight mb-6">Sincronizzato. Ancora tagli a mano?</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-8 font-mono text-sm leading-relaxed border-l-2 border-brand-pink pl-4">
+                    Marco copre multicam eventi e ha bisogno di highlight TikTok in fretta. La sfida è il ritmo montaggio sotto deadline, non girare. Tool che sembravano facili in demo diventavano maratone notturne. Il dubbio: il montaggio AI resta pratico o è solo bozza grezza? Lo ha tenuto quando il ritmo ha funzionato: ingest angolazioni evento, regola il passo in Settings, torna a rough cut ed export verticali. Crop 9:16 face-aware, sottotitoli stilizzati, batch da una sessione. Meno colli di bottiglia, niente timeline cloud, processo settimanale di fiducia.
+                </p>
+                <div class="space-y-4 mb-8 text-sm text-gray-500 font-mono">
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Dubbio</span>
+                        <span class="text-gray-900 dark:text-white font-bold">"Il cut AI non sarà usabile"</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Prova</span>
+                        <span class="text-brand-pink font-bold">Regola ritmo in Settings</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Guadagno</span>
+                        <span class="text-gray-900 dark:text-white font-bold">Rough cut prima di pranzo</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Fiducia</span>
+                        <span class="text-gray-900 dark:text-white font-bold">Raffina, non rifare</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Section 3: Platform Exports -->
+<section class="py-32 px-6 bg-white dark:bg-[#0a0a0a] border-b border-gray-200 dark:border-white/10 transition-colors relative">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div>
+                <div class="text-sm font-mono text-brand-gold font-bold uppercase tracking-widest mb-4">Funzione_03</div>
+                <h2 class="text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight mb-6">Rough cut fatto. Ancora export una piattaforma alla volta?</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-8 font-mono text-sm leading-relaxed border-l-2 border-brand-gold pl-4">
+                    Luca produce livestream clienti con footage sensibile — tutto resta sul suo host Docker con NAS. Sara batcha multicam lezioni per LMS e social. Il dubbio: una sessione può esportare YouTube 16:9, TikTok 9:16, Instagram Reels e Facebook senza re-ingest? Hanno testato una sessione completa, verificato profili piattaforma, accodato export multi-formato da un master. Tagliata la parte costosa: re-render per ogni canale. Cicli publish più veloci, copertura piattaforma chiara, meno fix formato last-minute.
+                </p>
+                <div class="space-y-4 mb-8 text-sm text-gray-500 font-mono">
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Dubbio</span>
+                        <span class="text-gray-900 dark:text-white font-bold">"Un export per piattaforma?"</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Prova</span>
+                        <span class="text-brand-gold font-bold">Profili YT·TT·IG·FB integrati</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Guadagno</span>
+                        <span class="text-gray-900 dark:text-white font-bold">Batch da un ingest</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Fiducia</span>
+                        <span class="text-green-500 font-bold">Re-export senza re-ingest</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#111] border border-brand-gold/30 p-6 rounded shadow-2xl">
+                <div class="text-[10px] text-gray-500 uppercase font-mono mb-4 border-b border-white/10 pb-2">Coda Export Piattaforma</div>
+                <div class="font-mono text-xs text-gray-300 whitespace-pre overflow-x-auto">
+<span class="text-gray-500">Da una sessione</span>
+- Master YouTube 16:9
+- TikTok 9:16 (crop face-aware)
+- Instagram Reels 9:16
+- Facebook 16:9 / 9:16
+
+<span class="text-gray-500">Dopo tweak Settings</span>
+- Re-export senza re-ingest
+- Stessi stream allineati, nuovi profili
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to action -->
+<section class="py-32 px-6 bg-[#0b0d12] text-white relative overflow-hidden transition-colors bg-grid-pattern">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2 class="text-5xl lg:text-6xl font-black font-display mb-6 uppercase tracking-tight">La prima sessione è quella che ti convince</h2>
+        <p class="text-xl text-gray-400 mb-10 font-mono">Bootstrap stasera, trascina 2–4 clip multicam e verifica se sync, montaggio, sottotitoli ed export funzionano per il tuo workflow. Se passa il test, hai già una routine utile per domani.</p>
+
+        <div class="flex justify-center gap-4 flex-wrap">
+            <a href="/it/download/"
+                class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-black font-bold font-mono hover:bg-brand-purple hover:text-white transition-colors">
+                <i class="fab fa-docker"></i> Inizia con Docker
+            </a>
+            <a href="/it/architecture/"
+                class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-bold font-mono hover:bg-[#111] transition-colors">
+                <i class="fas fa-route"></i> Panoramica pipeline
+            </a>
+            <a href="/docs/it/getting-started/first-run/"
+                class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-bold font-mono hover:bg-[#111] transition-colors">
+                <i class="fas fa-book"></i> Guida al primo avvio
+            </a>
+        </div>
+    </div>
+</section>

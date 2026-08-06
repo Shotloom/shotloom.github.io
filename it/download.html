@@ -1,0 +1,87 @@
+---
+layout: default
+title: "Avvia Shotloom (Docker)"
+lang: it
+permalink: /it/download/
+description: "Bootstrap Shotloom con Docker. Apri la dashboard, carica clip multicam ed esporta per YouTube, TikTok, Instagram e Facebook."
+---
+
+<section class="relative pt-32 pb-20 overflow-hidden bg-grid-pattern border-b border-gray-200 dark:border-white/10">
+    <div class="absolute inset-0 bg-white/90 dark:bg-brand-dark/90 transition-colors"></div>
+    <div class="max-w-3xl mx-auto px-6 relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-purple/10 border-l-4 border-brand-purple text-xs font-mono tracking-widest uppercase mb-8 text-brand-purple dark:text-brand-purpleLight">
+            <i class="fab fa-docker"></i> Docker · Windows / Linux / macOS
+        </div>
+        <h1 class="text-5xl lg:text-6xl font-black leading-[0.95] mb-6 font-display text-gray-900 dark:text-white uppercase tracking-tighter">
+            Bootstrap <span class="text-brand-purple">Shotloom</span>
+        </h1>
+        <p class="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-xl mx-auto leading-relaxed">
+            Clona il repo, lancia lo script bootstrap, apri <code class="font-mono text-brand-purple">http://127.0.0.1:8765</code>. Niente installer .exe — Docker avvia lo stack e i modelli al primo run.
+        </p>
+
+        <div class="bg-[#0b0d12] border border-brand-purple/30 p-8 shadow-2xl max-w-xl mx-auto text-left relative">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-purple to-brand-pink"></div>
+            <pre class="code-block text-left text-sm mb-6 overflow-x-auto"><span class="comment"># Linux / macOS / WSL</span>
+<span class="cmd">git clone</span> <span class="str">https://github.com/Shotloom/Shotloom.git</span>
+<span class="cmd">cd</span> Shotloom
+<span class="cmd">./scripts/bootstrap.sh</span></pre>
+            <a href="{{ site.cta.github_url }}"
+                class="flex items-center justify-center gap-2 w-full px-8 py-4 bg-white text-black font-bold font-mono text-sm hover:bg-brand-purple hover:text-white transition-colors mb-4">
+                <i class="fab fa-github"></i> Apri su GitHub
+            </a>
+            <p class="text-center font-mono text-[11px] text-gray-500">
+                Windows PowerShell: <code class="text-brand-purpleLight">.\scripts\bootstrap.ps1</code>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 px-6 bg-gray-50 dark:bg-brand-surface border-b border-gray-200 dark:border-white/10 transition-colors">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">Dopo il bootstrap</h2>
+            <h3 class="text-3xl lg:text-4xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight">Da Docker avviato al primo export</h3>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="p-8 bg-white dark:bg-[#111] border border-gray-200 dark:border-white/10">
+                <div class="text-brand-purple text-3xl mb-4"><i class="fas fa-terminal"></i></div>
+                <div class="font-mono text-xs text-gray-400 mb-2">01</div>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Compose up</h4>
+                <p class="text-sm text-gray-500 leading-relaxed">Il bootstrap costruisce le immagini e attende l'API. Compose GPU opzionale per NVIDIA su Linux/WSL2.</p>
+            </div>
+            <div class="p-8 bg-white dark:bg-[#111] border border-gray-200 dark:border-white/10">
+                <div class="text-brand-pink text-3xl mb-4"><i class="fas fa-display"></i></div>
+                <div class="font-mono text-xs text-gray-400 mb-2">02</div>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Apri la dashboard</h4>
+                <p class="text-sm text-gray-500 leading-relaxed">Tab Media: trascina 2–4 clip multicam. Settings: ritmo montaggio e stile caption. Captions: anteprima e modifica.</p>
+            </div>
+            <div class="p-8 bg-white dark:bg-[#111] border border-gray-200 dark:border-white/10">
+                <div class="text-green-500 text-3xl mb-4"><i class="fas fa-file-export"></i></div>
+                <div class="font-mono text-xs text-gray-400 mb-2">03</div>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Export piattaforme</h4>
+                <p class="text-sm text-gray-500 leading-relaxed">Accoda profili YouTube, TikTok, Instagram, Facebook. Gli artifact restano nella directory progetto su disco.</p>
+            </div>
+        </div>
+
+        <div class="mt-12 grid sm:grid-cols-2 gap-6">
+            <div class="p-6 border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0a0a0a]">
+                <h4 class="font-mono text-xs text-gray-500 uppercase mb-3">Requisiti</h4>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> Docker Desktop o Engine 24+</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> 16 GB RAM consigliati</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> Disco per proxy ed export</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> GPU opzionale (analisi più veloce)</li>
+                </ul>
+            </div>
+            <div class="p-6 border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0a0a0a]">
+                <h4 class="font-mono text-xs text-gray-500 uppercase mb-3">Guide</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/docs/it/getting-started/first-run/" class="text-brand-purple hover:underline"><i class="fas fa-book mr-2"></i> Primo avvio</a></li>
+                    <li><a href="https://github.com/Shotloom/Shotloom/blob/main/docs/install.md" class="text-brand-purple hover:underline"><i class="fas fa-file-lines mr-2"></i> install.md (canonico)</a></li>
+                    <li><a href="/docs/it/getting-started/models/" class="text-brand-purple hover:underline"><i class="fas fa-microchip mr-2"></i> Modelli</a></li>
+                    <li><a href="/docs/it/reference/faq/" class="text-brand-purple hover:underline"><i class="fas fa-circle-question mr-2"></i> FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

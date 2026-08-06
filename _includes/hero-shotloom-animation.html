@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="{{ '/assets/css/hero-shotloom.css' | relative_url }}">
+
+<div class="hero-shotloom" aria-hidden="true">
+    <div class="hero-shotloom__stage">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" fill="none" role="presentation">
+            <defs>
+                <linearGradient id="shotloom-tape-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#ff5b45" />
+                    <stop offset="100%" stop-color="#ff3d8b" />
+                </linearGradient>
+                <filter id="shotloom-blur" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="4" result="blur" />
+                    <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+            </defs>
+
+            <!-- Multicam clips -->
+            <g class="hero-shotloom__file">
+                <rect x="10" y="58" width="52" height="40" rx="4" fill="#14171f" stroke="#334155" stroke-width="1.5" />
+                <rect x="10" y="104" width="52" height="40" rx="4" fill="#14171f" stroke="#334155" stroke-width="1.5" />
+                <rect x="10" y="150" width="52" height="40" rx="4" fill="#14171f" stroke="#334155" stroke-width="1.5" />
+                <circle cx="22" cy="70" r="3" fill="#ff5b45" />
+                <circle cx="22" cy="116" r="3" fill="#ff3d8b" />
+                <circle cx="22" cy="162" r="3" fill="#ff7a66" />
+                {% if page.lang == 'it' %}
+                <text x="30" y="74" fill="#e2e8f0" font-family="ui-monospace, monospace" font-size="7">cam_A</text>
+                <text x="30" y="120" fill="#e2e8f0" font-family="ui-monospace, monospace" font-size="7">cam_B</text>
+                <text x="30" y="166" fill="#e2e8f0" font-family="ui-monospace, monospace" font-size="7">cam_C</text>
+                {% else %}
+                <text x="30" y="74" fill="#e2e8f0" font-family="ui-monospace, monospace" font-size="7">cam_A</text>
+                <text x="30" y="120" fill="#e2e8f0" font-family="ui-monospace, monospace" font-size="7">cam_B</text>
+                <text x="30" y="166" fill="#e2e8f0" font-family="ui-monospace, monospace" font-size="7">cam_C</text>
+                {% endif %}
+            </g>
+
+            <circle class="hero-shotloom__glow" cx="168" cy="100" r="24" fill="#ff5b45" opacity="0.35" filter="url(#shotloom-blur)" />
+
+            <!-- Weave hub -->
+            <g class="hero-shotloom__reel">
+                <rect x="152" y="84" width="32" height="32" rx="6" stroke="#ff7a66" stroke-width="3" fill="#0b0d12" />
+                <line x1="160" y1="92" x2="160" y2="108" stroke="#ff5b45" stroke-width="2" />
+                <line x1="168" y1="92" x2="168" y2="108" stroke="#ff3d8b" stroke-width="2" />
+                <line x1="176" y1="92" x2="176" y2="108" stroke="#ff7a66" stroke-width="2" />
+            </g>
+
+            <path class="hero-shotloom__tape" d="M184 100 C210 100 230 100 252 100" stroke="url(#shotloom-tape-gradient)" stroke-width="5" stroke-linecap="round" />
+            <path class="hero-shotloom__tape-line" d="M252 100 H292" stroke="#ff7a66" stroke-width="3.5" stroke-linecap="round" opacity="0.85" />
+            <line class="hero-shotloom__tape-line" x1="252" y1="100" x2="318" y2="100" stroke="#ff6ba8" stroke-width="2.5" stroke-linecap="round" opacity="0.7" />
+            <line class="hero-shotloom__tape-line hero-shotloom__tape-line--2" x1="252" y1="112" x2="302" y2="112" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" opacity="0.55" />
+            <line class="hero-shotloom__tape-line hero-shotloom__tape-line--3" x1="252" y1="122" x2="278" y2="122" stroke="#64748b" stroke-width="2" stroke-linecap="round" opacity="0.45" />
+
+            <circle class="hero-shotloom__particle hero-shotloom__particle--1" cx="188" cy="100" r="3.5" fill="#ff6ba8" />
+            <circle class="hero-shotloom__particle hero-shotloom__particle--2" cx="188" cy="100" r="2.5" fill="#ff5b45" />
+            <circle class="hero-shotloom__particle hero-shotloom__particle--3" cx="188" cy="100" r="2" fill="#ff3d8b" />
+
+            <g class="hero-shotloom__doc">
+                <rect x="326" y="52" width="142" height="96" rx="6" fill="#14171f" stroke="#334155" stroke-width="1.5" />
+                <rect x="326" y="52" width="4" height="96" rx="2" fill="#ff5b45" />
+                <text x="340" y="74" fill="#ff7a66" font-family="ui-monospace, monospace" font-size="8" font-weight="700">TIMELINE</text>
+                {% if page.lang == 'it' %}
+                <text class="hero-shotloom__line" x="340" y="92" fill="#e2e8f0" font-family="ui-monospace, monospace" font-size="8.5">Sync 3 camere…</text>
+                <text class="hero-shotloom__line hero-shotloom__line--2" x="340" y="106" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="8.5">Rough cut AI</text>
+                {% else %}
+                <text class="hero-shotloom__line" x="340" y="92" fill="#e2e8f0" font-family="ui-monospace, monospace" font-size="8.5">Sync 3 cameras…</text>
+                <text class="hero-shotloom__line hero-shotloom__line--2" x="340" y="106" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="8.5">AI rough cut</text>
+                {% endif %}
+            </g>
+
+            <g class="hero-shotloom__srt">
+                <rect x="340" y="114" width="52" height="14" rx="2" fill="rgba(255, 91, 69, 0.15)" stroke="#ff7a66" stroke-width="0.5" />
+                <text x="344" y="124" fill="#ff6ba8" font-family="ui-monospace, monospace" font-size="7" font-weight="600">9:16 ✓</text>
+            </g>
+
+            <g class="hero-shotloom__summary">
+                <rect x="396" y="114" width="62" height="14" rx="2" fill="rgba(255, 61, 139, 0.12)" stroke="#ff3d8b" stroke-width="0.5" stroke-dasharray="3 2" />
+                {% if page.lang == 'it' %}
+                <text x="400" y="124" fill="#ff6ba8" font-family="ui-monospace, monospace" font-size="6.5">YT·TT·IG·FB</text>
+                {% else %}
+                <text x="400" y="124" fill="#ff6ba8" font-family="ui-monospace, monospace" font-size="6.5">YT·TT·IG·FB</text>
+                {% endif %}
+            </g>
+        </svg>
+    </div>
+</div>

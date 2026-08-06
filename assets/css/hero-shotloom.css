@@ -1,0 +1,181 @@
+/* Hero Shotloom — multicam threads → timeline, fixed height, 8s loop */
+
+.hero-shotloom {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    flex-shrink: 0;
+}
+
+.hero-shotloom__stage {
+    width: 100%;
+    height: 11.5rem;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: #0b0d12;
+    border: 1px solid rgba(255, 91, 69, 0.3);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+}
+
+.hero-shotloom__stage svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-shotloom__file {
+    opacity: 0;
+    animation: shotloom-file 8s ease-in-out infinite;
+}
+
+.hero-shotloom__reel {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: shotloom-reel-pulse 8s ease-in-out infinite;
+}
+
+.hero-shotloom__tape {
+    stroke-dasharray: 160;
+    stroke-dashoffset: 160;
+    animation: shotloom-tape-draw 8s ease-in-out infinite;
+}
+
+.hero-shotloom__tape-line {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: shotloom-tape-lines 8s ease-in-out infinite;
+}
+
+.hero-shotloom__glow {
+    opacity: 0;
+    animation: shotloom-glow 8s ease-in-out infinite;
+}
+
+.hero-shotloom__particle {
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: shotloom-particle 8s linear infinite;
+}
+
+.hero-shotloom__tape-line--2 { animation-delay: 0.1s; }
+.hero-shotloom__tape-line--3 { animation-delay: 0.2s; }
+.hero-shotloom__particle--2 { animation-delay: 0.12s; }
+.hero-shotloom__particle--3 { animation-delay: 0.24s; }
+
+.hero-shotloom__doc {
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: shotloom-doc 8s ease-in-out infinite;
+}
+
+.hero-shotloom__line {
+    opacity: 0;
+    animation: shotloom-line 8s ease-in-out infinite;
+}
+
+.hero-shotloom__line--2 { animation-delay: 0.08s; }
+
+.hero-shotloom__srt {
+    opacity: 0;
+    animation: shotloom-srt 8s ease-in-out infinite;
+}
+
+.hero-shotloom__summary {
+    opacity: 0;
+    animation: shotloom-summary 8s ease-in-out infinite;
+}
+
+@keyframes shotloom-file {
+    0%, 3%, 92%, 100% { opacity: 0; }
+    7%, 78% { opacity: 1; }
+    88% { opacity: 0.2; }
+}
+
+@keyframes shotloom-reel-pulse {
+    0%, 8%, 100% { transform: scale(1) rotate(0deg); }
+    12% { transform: scale(1.08) rotate(-4deg); }
+    16% { transform: scale(1) rotate(0deg); }
+    20% { transform: scale(1.05) rotate(3deg); }
+    24%, 78% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes shotloom-tape-draw {
+    0%, 14%, 92%, 100% { stroke-dashoffset: 160; }
+    32%, 78% { stroke-dashoffset: 0; }
+    88% { stroke-dashoffset: 160; }
+}
+
+@keyframes shotloom-tape-lines {
+    0%, 26%, 92%, 100% { stroke-dashoffset: 50; }
+    38%, 78% { stroke-dashoffset: 0; }
+    88% { stroke-dashoffset: 50; }
+}
+
+@keyframes shotloom-glow {
+    0%, 16%, 90%, 100% { opacity: 0; }
+    22%, 42% { opacity: 0.5; }
+    52%, 78% { opacity: 0.3; }
+    86% { opacity: 0; }
+}
+
+@keyframes shotloom-particle {
+    0%, 16%, 90%, 100% { opacity: 0; transform: translateX(0); }
+    20% { opacity: 0.95; }
+    34% { opacity: 0.95; transform: translateX(108px); }
+    38% { opacity: 0; }
+    78% { opacity: 0; }
+}
+
+@keyframes shotloom-doc {
+    0%, 28%, 92%, 100% { opacity: 0; transform: translateY(6px) scale(0.98); }
+    34%, 78% { opacity: 1; transform: translateY(0) scale(1); }
+    88% { opacity: 0; transform: translateY(4px) scale(0.99); }
+}
+
+@keyframes shotloom-line {
+    0%, 34%, 92%, 100% { opacity: 0; }
+    40%, 78% { opacity: 1; }
+    88% { opacity: 0; }
+}
+
+@keyframes shotloom-srt {
+    0%, 42%, 92%, 100% { opacity: 0; transform: translateY(4px); }
+    48%, 78% { opacity: 1; transform: translateY(0); }
+    88% { opacity: 0; }
+}
+
+@keyframes shotloom-summary {
+    0%, 54%, 92%, 100% { opacity: 0; transform: translateY(4px) scale(0.96); }
+    60%, 78% { opacity: 1; transform: translateY(0) scale(1); }
+    88% { opacity: 0; }
+}
+
+@media (min-width: 640px) {
+    .hero-shotloom__stage { height: 12.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-shotloom__file,
+    .hero-shotloom__reel,
+    .hero-shotloom__tape,
+    .hero-shotloom__tape-line,
+    .hero-shotloom__glow,
+    .hero-shotloom__particle,
+    .hero-shotloom__doc,
+    .hero-shotloom__line,
+    .hero-shotloom__srt,
+    .hero-shotloom__summary {
+        animation: none !important;
+    }
+    .hero-shotloom__file { opacity: 1; }
+    .hero-shotloom__tape,
+    .hero-shotloom__tape-line { stroke-dashoffset: 0; }
+    .hero-shotloom__glow { opacity: 0.3; }
+    .hero-shotloom__particle { opacity: 0; }
+    .hero-shotloom__doc,
+    .hero-shotloom__line,
+    .hero-shotloom__srt,
+    .hero-shotloom__summary { opacity: 1; transform: none; }
+}

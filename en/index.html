@@ -1,0 +1,303 @@
+---
+layout: default
+title: "Shotloom — Local AI Multicam NLE"
+lang: en
+locale: en_US
+description: "Drop in 2–4 multicam clips. Shotloom syncs, montages with AI, and exports for YouTube, TikTok, Instagram and Facebook — 100% local."
+---
+
+<section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-x-hidden bg-grid-pattern">
+    <div class="absolute inset-0 bg-white/90 dark:bg-brand-dark/90 transition-colors"></div>
+
+    <div class="max-w-7xl mx-auto hero-index__grid grid gap-8 items-start px-6 w-full relative z-10">
+        <div class="reveal active min-w-0">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-brand-purple/10 border-l-4 border-brand-purple text-xs font-mono tracking-widest uppercase mb-8 text-brand-purple dark:text-brand-purpleLight">
+                <span class="w-2 h-2 rounded-none bg-brand-purple animate-pulse"></span>
+                Multicam · Podcasts · Events
+            </div>
+            <h1 class="hero-index__title font-black mb-6 font-display text-gray-900 dark:text-white uppercase tracking-tighter">
+                Four cameras.<br>
+                <span class="text-brand-purple">One rough cut</span><br>
+                <span class="text-brand-pink">before lunch.</span>
+            </h1>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-xl lg:max-w-2xl leading-relaxed">
+                You already shot the episode. What you're missing is sync, montage, captions, and platform exports — without uploading rushes to a cloud NLE. Bootstrap with Docker, open the dashboard, drop in <strong>2–4 camera clips</strong>: Shotloom builds a rough cut, styles subtitles, and exports for YouTube, TikTok, Instagram and Facebook on your machine.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="/en/download/"
+                    class="flex items-center justify-center gap-2 px-8 py-4 bg-brand-purple text-white font-bold font-mono text-sm hover:bg-brand-pink transition-colors border border-transparent">
+                    <i class="fab fa-docker"></i> Get started with Docker
+                </a>
+                <a href="#how-it-works"
+                    class="flex items-center justify-center gap-2 px-8 py-4 border border-gray-300 dark:border-white/20 font-bold font-mono text-sm hover:bg-gray-100 dark:hover:bg-white/5 transition-colors text-gray-800 dark:text-white">
+                    How it works <i class="fas fa-arrow-down text-xs"></i>
+                </a>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-gray-200 dark:border-white/10 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs text-gray-500 uppercase">
+                <div>
+                    <div class="text-brand-purple font-bold text-lg mb-1 font-mono">Local</div>
+                    <div>Your machine</div>
+                </div>
+                <div data-hero-lang-cycle>
+                    <div class="text-brand-pink font-bold text-lg mb-1 font-mono" data-hero-lang-code>YT</div>
+                    <div>4 platforms</div>
+                </div>
+                <div>
+                    <div class="text-gray-900 dark:text-white font-bold text-lg mb-1 font-mono">Multicam</div>
+                    <div>2–4 inputs</div>
+                </div>
+                <div>
+                    <div class="text-green-500 font-bold text-lg mb-1 font-mono">9:16</div>
+                    <div>Face-aware crop</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal delay-200 relative min-w-0 w-full">
+            <div class="hero-index__visual relative flex flex-col w-full max-w-full">
+            {% include hero-shotloom-animation.html %}
+            <div class="relative bg-[#0b0d12] rounded-lg border border-brand-purple/30 shadow-2xl overflow-hidden font-mono text-xs">
+                {% include win11-titlebar.html title="Shotloom — Dashboard" %}
+                <div class="px-3 py-2.5 space-y-1 text-gray-300 leading-snug">
+                    <div class="opacity-30 text-gray-500">Ingest: podcast_ep03_cam{A,B,C}.mp4</div>
+                    <div class="opacity-40">Sync: aligning 3 camera streams locally</div>
+                    <div class="opacity-50">Analysis: VAD + face scoring for 9:16</div>
+                    <div class="opacity-60">Montage: rough cut draft — 68%</div>
+                    <div class="opacity-80">Captions: styled SRT ready</div>
+                    <div class="text-brand-purpleLight">Export: YouTube 16:9 + TikTok 9:16 queued</div>
+                    <div class="text-green-400">Stored on your disk — no cloud upload</div>
+                    <div class="text-brand-pink">Tweak rhythm in Settings, then re-export</div>
+                    <div class="text-gray-400 mt-1.5 flex items-center gap-2">
+                        <span class="text-brand-purple">➜</span>
+                        <span class="typing-animation border-r-2 border-brand-purple pr-1 animate-pulse">Try your first multicam session</span>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute right-3 top-[calc(11.5rem+1rem)] bg-white dark:bg-brand-dark border border-gray-200 dark:border-white/10 p-3 rounded shadow-xl hidden lg:block max-w-[10rem]">
+                <div class="text-[10px] text-gray-500 uppercase font-mono mb-1">Typical case</div>
+                <div class="text-sm font-bold font-mono text-brand-purple">Elena: 3 cams → YT cut</div>
+            </div>
+            <div class="absolute left-3 bottom-4 bg-white dark:bg-brand-dark border border-gray-200 dark:border-white/10 p-3 rounded shadow-xl hidden lg:block max-w-[10rem]">
+                <div class="text-[10px] text-gray-500 uppercase font-mono mb-1">Privacy</div>
+                <div class="text-sm font-bold font-mono text-green-500">Stays local</div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-4 px-6 bg-yellow-500/10 border-y border-yellow-500/30 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+        <span class="text-yellow-600 dark:text-yellow-400 font-bold font-mono">STATUS:</span>
+        <span class="text-gray-600 dark:text-gray-400">Early access — pipeline in active development. Bootstrap via Docker. License TBD on GitHub.</span>
+    </div>
+</section>
+
+<section id="how-it-works" class="py-32 px-6 bg-gray-50 dark:bg-brand-surface border-b border-gray-200 dark:border-white/5 transition-colors">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-20">
+            <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">01. Drop and automate</h2>
+            <h3 class="text-4xl lg:text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight">Upload multicam, come back to a rough cut</h3>
+            <p class="text-gray-500 mt-4 max-w-2xl">Start with one real session. Nobody asks you to rebuild your workflow — just stop hand-syncing four angles. When it's done you have a timeline, captions, and platform exports ready to refine.</p>
+            <div class="w-20 h-1 bg-brand-purple mt-6"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-4 gap-8">
+            <div class="card-glow bg-white dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10 relative">
+                <div class="text-4xl text-gray-200 dark:text-white/5 font-black absolute top-4 right-4 font-mono">01</div>
+                <div class="text-brand-purple mb-6"><i class="fas fa-upload text-3xl"></i></div>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">Ingest</h4>
+                <p class="text-sm text-gray-500 leading-relaxed mb-4">Drag in 2–4 camera files from your shoot: podcast cams, event coverage, interview angles. No manual sync prep — queue the session and let Shotloom align streams.</p>
+                <div class="text-[10px] font-mono text-gray-400 bg-gray-100 dark:bg-black p-2">Multicam drop zone</div>
+            </div>
+            <div class="card-glow bg-white dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10 relative">
+                <div class="text-4xl text-gray-200 dark:text-white/5 font-black absolute top-4 right-4 font-mono">02</div>
+                <div class="text-brand-pink mb-6"><i class="fas fa-hourglass-half text-3xl"></i></div>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">Sync & analyze</h4>
+                <p class="text-sm text-gray-500 leading-relaxed mb-4">Audio alignment, VAD, face scoring for vertical crop — runs locally while you keep working. Long sessions don't glue you to the progress bar.</p>
+                <div class="text-[10px] font-mono text-gray-400 bg-gray-100 dark:bg-black p-2">Pipeline runs in Docker</div>
+            </div>
+            <div class="card-glow bg-white dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10 relative">
+                <div class="text-4xl text-gray-200 dark:text-white/5 font-black absolute top-4 right-4 font-mono">03</div>
+                <div class="text-green-500 mb-6"><i class="fas fa-wand-magic-sparkles text-3xl"></i></div>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">AI montage</h4>
+                <p class="text-sm text-gray-500 leading-relaxed mb-4">Rough cut with rhythm you can tune in the dashboard. Captions with style presets. Refine parameters — montage pace, subtitle look, segment lengths — before export.</p>
+                <div class="text-[10px] font-mono text-gray-400 bg-gray-100 dark:bg-black p-2">Dashboard: Media / Captions / Settings</div>
+            </div>
+            <div class="card-glow bg-white dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10 relative">
+                <div class="text-4xl text-gray-200 dark:text-white/5 font-black absolute top-4 right-4 font-mono">04</div>
+                <div class="text-brand-gold mb-6"><i class="fas fa-file-export text-3xl"></i></div>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">Export</h4>
+                <p class="text-sm text-gray-500 leading-relaxed mb-4">YouTube 16:9, TikTok 9:16, Instagram Reels, Facebook — platform profiles baked in. Elena ships weekly; Marco clips highlights; Giulia batches vertical cuts from one master session.</p>
+                <div class="text-[10px] font-mono text-gray-400 bg-gray-100 dark:bg-black p-2">YT · TT · IG · FB profiles</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-32 px-6 bg-white dark:bg-brand-dark transition-colors bg-grid-pattern relative">
+    <div class="absolute inset-0 bg-white/80 dark:bg-brand-dark/80"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="mb-20 text-center">
+            <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">02. Who this is for</h2>
+            <h3 class="text-4xl lg:text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight">Multicam piling up, publish window closing</h3>
+            <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Every profile starts with a real doubt: "Will Docker run?", "Is sync accurate?", "Can it export for TikTok?", "Does footage stay private?" Test one session on your hardware — then decide.</p>
+        </div>
+
+        <div class="space-y-12">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0a0a0a]">
+                <div class="p-8 border-b sm:border-r border-gray-200 dark:border-white/10">
+                    <div class="text-brand-purple text-2xl mb-4"><i class="fas fa-podcast"></i></div>
+                    <div class="inline-block px-2 py-0.5 bg-brand-purple/20 text-brand-purple font-mono text-[10px] font-bold mb-3">PODCAST</div>
+                    <h4 class="text-xl font-black font-display text-gray-900 dark:text-white uppercase mb-2">Elena</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Three-camera podcast every week — sync, rough cut, YouTube master and vertical clips without overnight editing marathons.</p>
+                </div>
+                <div class="p-8 border-b lg:border-r border-gray-200 dark:border-white/10">
+                    <div class="text-brand-pink text-2xl mb-4"><i class="fas fa-video"></i></div>
+                    <div class="inline-block px-2 py-0.5 bg-brand-pink/20 text-brand-pink font-mono text-[10px] font-bold mb-3">CREATOR</div>
+                    <h4 class="text-xl font-black font-display text-gray-900 dark:text-white uppercase mb-2">Marco</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Event multicam → TikTok highlights and Reels. Face-aware 9:16 crop, styled captions, batch export from one ingest.</p>
+                </div>
+                <div class="p-8 border-b sm:border-r border-gray-200 dark:border-white/10">
+                    <div class="text-green-500 text-2xl mb-4"><i class="fas fa-film"></i></div>
+                    <div class="inline-block px-2 py-0.5 bg-green-500/20 text-green-500 font-mono text-[10px] font-bold mb-3">PRODUCER</div>
+                    <h4 class="text-xl font-black font-display text-gray-900 dark:text-white uppercase mb-2">Luca</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Client livestreams with sensitive footage — everything stays on his NAS-backed Docker host, not a random cloud timeline.</p>
+                </div>
+                <div class="p-8">
+                    <div class="text-brand-gold text-2xl mb-4"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="inline-block px-2 py-0.5 bg-brand-gold/20 text-brand-gold font-mono text-[10px] font-bold mb-3">EDU</div>
+                    <h4 class="text-xl font-black font-display text-gray-900 dark:text-white uppercase mb-2">Sara</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Lecture multicam → captioned cuts for LMS and social. Searchable transcripts, platform-ready exports, no per-minute SaaS bill.</p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-0 border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0a0a0a]">
+                <div class="p-10 border-b lg:border-b-0 lg:border-r border-gray-200 dark:border-white/10">
+                    <div class="inline-block px-3 py-1 bg-green-500/20 text-green-500 font-mono text-xs font-bold mb-4">REFINE</div>
+                    <h4 class="text-3xl font-black font-display text-gray-900 dark:text-white uppercase mb-4">Automate first, tweak second</h4>
+                    <p class="text-gray-500 mb-6 leading-relaxed">Shotloom does the heavy lift — sync, rough cut, captions, exports. Then you dial montage rhythm, subtitle style, and platform durations in the dashboard. Fast path by default; precision when you want it.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Bootstrap once, reuse for every session</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Settings tab for rhythm and style</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Re-export without re-ingesting</li>
+                    </ul>
+                </div>
+                <div class="p-10 flex flex-col justify-center bg-gray-50 dark:bg-[#111]">
+                    <h5 class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4">To get started</h5>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-200 dark:border-white/5 pb-2">
+                            <span class="text-gray-600 dark:text-gray-400">Bootstrap</span>
+                            <span class="text-green-500 font-bold">Docker + script</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-200 dark:border-white/5 pb-2">
+                            <span class="text-gray-600 dark:text-gray-400">Dashboard</span>
+                            <span class="text-gray-900 dark:text-white font-bold">127.0.0.1:8765</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-200 dark:border-white/5 pb-2">
+                            <span class="text-gray-600 dark:text-gray-400">First session</span>
+                            <span class="text-gray-900 dark:text-white font-bold">2–4 camera clips</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 dark:text-gray-400">Personal use</span>
+                            <span class="text-brand-purple font-bold">Free (early access)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-32 px-6 bg-[#0b0d12] text-white border-y border-white/10">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-sm font-mono text-red-500 font-bold uppercase tracking-widest mb-4">03. Where your rushes go</h2>
+                <h3 class="text-4xl lg:text-5xl font-black font-display uppercase tracking-tight mb-6">Your footage doesn't leave your machine</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed text-sm border-l border-red-500/30 pl-4">Unreleased episodes, client events, interview rushes — privacy is why creators skip cloud NLEs. Shotloom runs in Docker on hardware you control. Try it tonight without wondering where your multicam ends up.</p>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-red-500"><i class="fas fa-lock"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">No forced cloud timeline</h4>
+                            <p class="text-gray-500 text-sm">Ingest, sync, and export locally. Optional cloud APIs stay off until you configure them.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-red-500"><i class="fas fa-server"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Docker on your box or VPS</h4>
+                            <p class="text-gray-500 text-sm">Dev laptop, workstation, or locked-down server — bind to localhost by default. You choose exposure.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-red-500"><i class="fas fa-toggle-off"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Open pipeline, verifiable</h4>
+                            <p class="text-gray-500 text-sm">Source on GitHub. Inspect what runs before you point it at client footage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative p-8 border border-red-500/20 bg-red-500/5 rounded">
+                <div class="absolute top-0 right-0 bg-red-500 text-black text-[10px] font-bold font-mono px-2 py-1">STATUS</div>
+                <div class="space-y-6 font-mono text-sm">
+                    <div>
+                        <div class="flex justify-between mb-1"><span class="text-gray-400">Core pipeline</span><span class="text-green-500">LOCAL</span></div>
+                        <div class="w-full bg-black h-2 border border-white/10"><div class="bg-green-500 h-full" style="width: 100%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1"><span class="text-gray-400">Platform exports</span><span class="text-yellow-500">YT·TT·IG·FB</span></div>
+                        <div class="w-full bg-black h-2 border border-white/10"><div class="bg-yellow-500 h-full" style="width: 85%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1"><span class="text-gray-400">File ownership</span><span class="text-green-500">YOUR DISK</span></div>
+                        <div class="w-full bg-black h-2 border border-white/10"><div class="bg-green-500 h-full" style="width: 100%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-32 px-6 bg-gray-50 dark:bg-[#111] border-y border-gray-200 dark:border-white/10 transition-colors">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">04. Before you ask</h2>
+            <h3 class="text-4xl lg:text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight">"Will this run on my setup?"</h3>
+            <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Docker, hardware, sync quality, long sessions, privacy, and cost — straight answers before you bootstrap.</p>
+        </div>
+        {% include accordion-faq.html %}
+        <p class="text-center mt-10 font-mono text-xs text-gray-500">
+            Full reference: <a href="/docs/reference/faq/" class="text-brand-purple hover:underline">Documentation FAQ</a>
+        </p>
+    </div>
+</section>
+
+<section class="py-32 px-6 bg-white dark:bg-brand-dark relative overflow-hidden transition-colors bg-grid-pattern">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2 class="text-5xl lg:text-6xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tight">Got multicam rushes you've been sitting on?</h2>
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-10">Bootstrap tonight, drop your first 2–4 camera clips, and see sync, rough cut, and export on your own footage. If the first session convinces you, tomorrow you already have a new publish workflow.</p>
+
+        <div class="bg-[#0b0d12] border border-white/10 p-8 max-w-2xl mx-auto mb-10 shadow-2xl relative text-left">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-purple to-brand-pink"></div>
+            <div class="grid sm:grid-cols-3 gap-6 font-mono text-sm">
+                <div><span class="text-brand-purple font-bold">01</span><div class="text-white mt-1">Bootstrap</div><div class="text-gray-500 text-xs">./scripts/bootstrap.sh</div></div>
+                <div><span class="text-brand-pink font-bold">02</span><div class="text-white mt-1">Open dashboard</div><div class="text-gray-500 text-xs">127.0.0.1:8765</div></div>
+                <div><span class="text-green-400 font-bold">03</span><div class="text-white mt-1">Drop multicam</div><div class="text-gray-500 text-xs">sync → cut → export</div></div>
+            </div>
+        </div>
+
+        <div class="flex justify-center gap-4 flex-wrap">
+            <a href="/en/download/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-purple text-white font-bold font-mono hover:bg-brand-pink transition-colors">
+                <i class="fab fa-docker"></i> Get started
+            </a>
+            <a href="/docs/getting-started/first-run/" class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold font-mono hover:bg-gray-100 dark:hover:bg-[#111] transition-colors">
+                <i class="fas fa-book"></i> First-run guide
+            </a>
+        </div>
+    </div>
+</section>
